@@ -66,7 +66,7 @@ function skrypt2()
     }
     else
     {
-        $pozycja=$_POST['pozycja'];
+        $pozycja=@$_POST['pozycja'];
 
         if(!empty($pozycja))
         {
