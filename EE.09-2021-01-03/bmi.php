@@ -77,6 +77,9 @@ function skrypt2()
             $BMI=$waga/($wzrost*$wzrost)*10000;
             $przedzial=0;
             $data=date('Y-m-d');
+            
+            $waga=floatval($waga);
+            $wzrost=floatval($wzrost);
 
             echo 'Twoja waga: '.$waga.' Twój wzrost: '.$wzrost.'<br>BMI wynosi: '.$BMI;
 
