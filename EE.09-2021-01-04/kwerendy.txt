@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT INTO wynik VALUES (NULL, 1, '2020-05-20', 15);
+Zapytanie 2: SELECT id, informacja, wart_min FROM `bmi`;
+Zapytanie 3: SELECT wynik.wynik, bmi.informacja FROM wynik INNER JOIN bmi ON wynik.bmi_id=bmi.id;
+Zapytanie 4: SELECT wart_min, wart_max FROM `bmi` WHERE informacja='niedowaga';
