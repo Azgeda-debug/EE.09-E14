@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT INTO `ratownicy` VALUES (NULL, 20, 'Adam Nowak', 'Jan Kowalski', 'Anna Nowakowska');
+Zapytanie 2: SELECT id, adres, ratownicy_id FROM `zgloszenia` WHERE dyspozytorzy_id = 4;
+Zapytanie 3: CREATE USER 'adam'@'localhost' IDENTIFIED BY 'Adam6&';
+Zapytanie 4: GRANT CREATE, ALTER, DROP ON ratownicy TO 'adam'@'localhost';

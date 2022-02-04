@@ -1,0 +1,50 @@
+body
+{
+    font-family:  Arial;
+}
+
+a
+{
+    border: 2px dotted saddlebrown;
+    background: snow;
+    color: saddlebrown;
+    padding: 20px;
+    line-height: 100px;
+}
+
+ol
+{
+    list-style-type: lower-latin;
+}
+
+#lewy-baner, #srodkowy-baner, #prawy-baner, #lewa-stopka, #srodkowa-stopka, #prawa-stopka
+{
+    background: saddlebrown;
+    color: white;
+    height: 100px;
+    float: left;
+}
+
+#lewy-baner, #lewa-stopka
+{
+    width: 55%;
+    font-size: 120%;
+}
+
+#srodkowy-baner, #srodkowa-stopka
+{
+    width: 25%;
+}
+
+#prawy-baner, #prawa-stopka
+{
+    width: 20%;
+    text-align: right;
+}
+
+#glowny
+{
+    background: snow;
+    padding: 70px;
+    clear: both;
+}
