@@ -1,0 +1,68 @@
+body
+{
+    font-family: Tahoma;
+}
+
+#lewy-baner, #prawy-baner
+{
+    background: #003d33;
+    color: white;
+    text-align: center;
+    height: 50px;
+    float: left;
+}
+
+#lewy-baner
+{
+    width: 70%;
+}
+
+#prawy-baner
+{
+    width: 30%;
+}
+
+#lewy
+{
+    background: #26a69a;
+    height: 550px;
+    width: 30%;
+    float: left;
+}
+
+#prawy
+{
+    background: #26a69a;
+    height: 550px;
+    width: 70%;
+    float: left;
+}
+
+#stopka
+{
+    background: #003d33;
+    color: white;
+    clear: both;
+}
+
+#wizytowka
+{
+    width: 400px;
+    margin: 30px;
+    text-align: center;
+    border: 1px solid #003d33;
+}
+
+#wizytowka input
+{
+    background: #003d33;
+    color: white;
+    width: 100%;
+    height: 30px;
+    border: none;
+}
+
+#wizytowka input:hover
+{
+    background: #004c40;
+}
