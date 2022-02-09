@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria</title>
+    <link rel="stylesheet" type="text/css" href="styl7.css">
+    <script>
+
+        var klikniecia = 0;
+
+        function ZmienSerce()
+        {
+            klikniecia++;
+
+            if(klikniecia%2 == 0)
+            {
+                document.getElementById("serce").src = 'icon-on.png';
+            }
+            else
+            {
+                document.getElementById("serce").src = 'icon-off.png';
+            }
+            }
+
+        function ZmienZdjecie(id,img)
+        {   
+            document.getElementById(id).src = img;
+        }
+
+    </script>
+</head>
+<body>
+    <div id="baner">
+        <h2>Galeria miejsc ciekawych</h2>
+    </div>
+    <div id="glowny">
+        <img src="lanzarotte.jpg" alt="galeria" id="wynik"> 
+    </div>
+    <div id="lewy">
+        <h3>Przeglądaj zdjęcia</h3>
+        <img onclick="ZmienZdjecie('wynik', 'lanzarotte.jpg')" src="lanzarotte.jpg" alt="lanzarotte">
+        <img onclick="ZmienZdjecie('wynik', 'pekin.jpg')" src="pekin.jpg" alt="pekin">
+        <img onclick="ZmienZdjecie('wynik', 'serengeti.jpg')" src="serengeti.jpg" alt="serengeti">
+        <img onclick="ZmienZdjecie('wynik', 'wenecja.jpg')" src="wenecja.jpg" alt="wenecja">
+        <img onclick="ZmienZdjecie('wynik', 'tajlandia.jpg')" src="tajlandia.jpg" alt="tajlandia">
+    </div>
+    <div id="prawy">
+        <h3>Obrazy w naszej galerii</h3>
+        <table>
+            <tr>
+                <td>Europa</td>
+                <td>Azja</td>
+                <td>Afryka</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <p>Polub nas <img onclick="ZmienSerce()" src="icon-off.png" alt="icon-off" id="serce"></p>
+        <a href="https://pixbay.com" target="_blank">Odkryj więcej zdjęć</a>
+    </div>
+    <div id="stopka">
+    Autor: 00000000000
+    </div>
+</body>
+</html>
