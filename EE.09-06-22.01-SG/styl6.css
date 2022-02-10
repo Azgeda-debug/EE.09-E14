@@ -1,0 +1,71 @@
+body
+{
+    font-family: Georgia;
+}
+
+p
+{
+    padding: 10px;
+}
+
+img
+{
+    padding: 10px;
+    border: 1px solid white;
+}
+
+#indigo
+{
+    background: indigo;
+}
+
+#steelblue
+{
+    background: steelblue;
+}
+
+#olive
+{
+    background: olive;
+}
+
+#prawy img, ul
+{
+    float: left;
+}
+
+#prawy p
+{
+    clear: both;
+}
+
+#lewy
+{
+    background: maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+    float: left;
+}
+
+#prawy
+{
+    background: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    overflow: auto;
+    float: left;
+}
+
+#stopka
+{
+    background: dimgray;
+    color: white;
+    clear: both;
+}
+
+ul
+{
+    list-style-type: circle;
+}
