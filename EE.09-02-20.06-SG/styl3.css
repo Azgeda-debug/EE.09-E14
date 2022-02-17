@@ -1,0 +1,56 @@
+body
+{
+    font-family: Verdana;
+}
+
+h2
+{
+    text-align: center;
+}
+
+h2::first-letter
+{
+    font-size: 150%;
+}
+
+img
+{
+    height: 100px;
+    padding: 7px;
+}
+
+img:hover
+{
+    background: rgb(210, 180, 140);
+}
+
+#baner, #stopka
+{
+    background: rgb(205, 92, 92);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    clear: both;
+}
+
+#lewy, #prawy
+{
+    background: rgb(250, 235, 215);
+    width: 25%;
+    height: 500px;
+    float: left;
+}
+
+#srodkowy
+{
+    background: rgb(250, 235, 215);
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+
+#dane
+{
+    background: rgb(210, 180, 140);
+    color: white;
+}
