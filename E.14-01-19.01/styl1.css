@@ -1,0 +1,63 @@
+body
+{
+    font-family: Helvetica;
+}
+
+h1
+{
+    letter-spacing: 5px;
+}
+
+form
+{
+    margin: 30px;
+    line-height: 3;
+}
+
+form:hover
+{
+    background: deepskyblue;
+}
+
+#lewy
+{
+    background: navy;
+    color: white;
+    height: 700px;
+    width: 25%;
+    float: left;
+}
+
+#pierwszy-prawy
+{
+    background: royalblue;
+    height: 100px;
+    width: 75%;
+    text-align: center;
+    float: left;
+}
+
+#drugi-prawy
+{
+    background: steelblue;
+    height: 300px;
+    width: 75%;
+    float: left;
+}
+
+#trzeci-prawy
+{
+    background: royalblue;
+    height: 300px;
+    width: 75%;
+    text-align: center;
+    float: left;
+}
+
+#stopka
+{
+    background: steelblue;
+    text-align: center;
+    padding: 20px;
+    clear: both;
+}
