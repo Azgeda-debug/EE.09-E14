@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formatowanie</title>
+    <link rel="stylesheet" type="text/css" href="styl2.css">
+    <script>
+
+        function zmien(kolor)
+        {
+            var rozmiar = document.getElementById("rozmiar").value;
+            var czcionka = document.getElementById("czcionka").value;
+
+            document.getElementById("wynik").style.color = kolor;
+            document.getElementById("wynik").style.fontSize = rozmiar+'%';
+
+            if(czcionka == 'normal')
+            {
+                document.getElementById("wynik").style.fontStyle = 'normal';
+                
+            }
+            else if(czcionka == 'italic')
+            {
+                document.getElementById("wynik").style.fontStyle = 'italic';
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id="baner">
+        <h1>Formatowanie dokumentów HTML</h1>
+    </div>
+    <div id="lewy-gorny">
+        <h2>Przykład listy - hobby</h2>
+        <ul>
+            <li>muzyka</li>
+            <li>turystyka</li>
+            <ol>
+                <li>góry</li>
+                <li>jeziora</li>
+                <li>na rowerze</li>
+            </ol>
+            <li>książki</li>
+        </ul>
+    </div>
+    <div id="srodkowy-gorny">
+        <h2>Przykład tabeli - rozkład dnia</h2>
+        <table>
+            <tr>
+                <th>Pora dnia</th>
+                <th>obowiązki</th>
+            </tr>
+            <tr>
+                <td>rano</td>
+                <td>nauka</td>
+            </tr>
+            <tr>
+                <td>południe</td>
+                <td>zajęcia dodatkowe</td>
+            </tr>
+            <tr>
+                <td>popołudnie</td>
+                <td rowspan="2">moje hobby</td>
+            </tr>
+            <tr>
+                <td>wieczór</td>
+            </tr>
+        </table>
+    </div>
+    <div id="prawy-gorny">
+        <img src="napisy.png" alt="technologia web">
+    </div>
+    <div id="glowny">
+        <p>Podaj rozmiar tekstu w procentach: <input type="number" id="rozmiar">%</p>
+        <p><select id="czcionka">
+            <option value="normal">prosty</option>
+            <option value="italic">kursywa</option>
+        </select></p>
+        <p>Jakim kolorem sformatować tekst? Wybierz przycisk</p>
+        <input type="submit" value="" onclick="zmien('red')" id="czerwony">
+        <input type="submit" value="" onclick="zmien('green')" id="zielony">
+        <input type="submit" value="" onclick="zmien('blue')" id="niebieski">
+        <p id="wynik">To jest przykład paragrafu, który może być dowolnie formatowany przez Java Script</p>
+    </div>
+    <div id="stopka">
+        <p>Formatowaniem tekstu zajmował się: <i>00000000000</i></p>
+        <a href="formatowanie.pl" target="_blank">Odwiedź także</a>
+    </div>
+</body>
+</html>

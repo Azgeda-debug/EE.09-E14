@@ -1,0 +1,73 @@
+body
+{
+    font-family: Georgia;
+}
+
+table, td, th
+{
+    border: 2px solid #69293A;
+    padding: 7px;
+    border-collapse: collapse;
+}
+
+ul
+{
+    list-style-type: square;
+}
+
+#czerwony
+{
+    background: red;
+}
+
+#zielony
+{
+    background: green;
+}
+
+#niebieski
+{
+    background: blue;
+}
+
+#baner
+{
+    background: #824555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#lewy-gorny, #srodkowy-gorny
+{
+    background: #A26475;
+    color: white;
+    width: 30%;
+    height: 300px;
+    float: left;
+}
+
+#prawy-gorny
+{
+    background: #A26475;
+    color: white;
+    width: 40%;
+    height: 300px;
+    text-align: right;
+    float: left;
+}
+
+#glowny
+{
+    background: #F0EAE2;
+    padding: 50px;
+    clear: both; 
+}
+
+#stopka
+{
+    background: #824555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
