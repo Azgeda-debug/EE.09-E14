@@ -1,0 +1,51 @@
+body
+{
+    font-family: Garamond;
+}
+
+form
+{
+    padding-top: 60px;
+}
+
+p
+{
+    font-size: 150%;
+}
+
+a:link
+{
+    color: yellow;
+}
+
+a:visited
+{
+    color: orange;
+}
+
+.gorny
+{
+    background: #790DB5;
+    color: orange;
+    height: 200px;
+    width: 25%;
+    text-align: center;
+    float: left;
+}
+
+.glowny
+{
+    background: #FFE6A3;
+    height: 500px;
+    width: 50%;
+    float: left;
+}
+
+#stopka
+{
+    background: #790DB5;
+    color: orange;
+    text-align: center;
+    padding: 30px;
+    clear: both;
+}
