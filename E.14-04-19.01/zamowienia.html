@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Hurtownia</title>
+    <link rel="stylesheet" type="text/css" href="styl4.css">
+    <script>
+
+        function licz()
+        {
+            var kawa = document.getElementById("kawa").value;
+            var waga = document.getElementById("waga").value;
+
+            kawa = parseInt(kawa);
+            waga = parseInt(waga);
+
+            var koszt = 0;
+
+
+            if(kawa != '' && waga != '')
+            {
+                if(kawa == 1)
+                {
+                    koszt = waga * 5;
+                }
+                else if(kawa == 2)
+                {
+                    koszt = waga * 7;
+                }
+                else if(kawa == 3)
+                {
+                    koszt = waga * 6
+                }
+                else
+                {
+                    koszt = 0;
+                }
+                document.getElementById("wynik").innerHTML = 'Koszt zamówienia wynosi '+koszt+' zł';
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="logo">
+        <img src="logo.png" alt="hurtownia">
+    </div>
+    <div id="menu">
+        <a href="index.html">Strona główna</a>
+        <a href="zamowienia.html">Zamówienia</a>
+        <a href="blog.html">Blog o kawie</a>
+        <a href="htttp://gatunki-kawy.pl" target="_blank">Odwiedź także</a>
+    </div>
+    <div id="baner">
+        <h1>Hurtownia kawy</h1>
+    </div>
+    <div id="lewy">
+        <h2>Oferta</h2>
+        <ol>
+            <li>Kawa palona Arabica</li>
+            <li>Kawa palona Robusta</li>
+            <li>Kawa bezkofeinowa</li>
+            <li id="line-through">Kawa zielona</li>
+        </ol>
+    </div>
+    <div id="prawy">
+        Podaj numer kawy: <br><input type="number" id="kawa"><br>
+        Podaj wagę w dekagramach <br><input type="number" id="waga"><br>
+        <input type="submit" value="Zamów" onclick="licz()">
+        <p id="wynik"></p>
+    </div>
+    <div id="stopka">
+        Stronę przygotował: <b>00000000000</b>
+    </div>
+</body>
+</html>
