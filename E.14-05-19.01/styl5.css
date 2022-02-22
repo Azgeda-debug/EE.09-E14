@@ -1,0 +1,57 @@
+body
+{
+    font-family: Verdana;
+}
+
+img
+{
+    margin: 7px;
+    padding: 5px;
+    border: 1px solid rosybrown;
+}
+
+img:hover
+{
+    border: 1px solid maroon;
+}
+
+#miniatura
+{
+    background: sienna;
+    height: 100px;
+    width: 20%;
+    float: left;
+}
+
+#tytul
+{
+    background: sienna;
+    color: orange;
+    height: 100px;
+    width: 80%;
+    float: left;
+}
+
+#lewy
+{
+    background: burlywood;
+    height: 700px;
+    width: 70%;
+    float: left;
+}
+
+#prawy
+{
+    background: burlywood;
+    height: 700px;
+    width: 30%;
+    float: left;
+}
+
+#stopka
+{
+    background: sienna;
+    color: orange;
+    text-align: center;
+    clear: both;
+}
