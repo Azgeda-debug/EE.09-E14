@@ -1,0 +1,51 @@
+body
+{
+    font-family: Verdana;
+}
+
+a:link
+{
+    background: green;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid orange;
+}
+
+a:visited
+{
+    background: violet;
+}
+
+#logo
+{
+    background: #FF9F79;
+    height: 270px;
+    width: 30%;
+    float: left;
+}
+
+#lista, #formularz
+{
+    background: #FF9F79;
+    color: green;
+    height: 270px;
+    width: 35%;
+    float: left;
+}
+
+#glowny
+{
+    background: #80CDAC;
+    height: 400px;
+    padding: 30px;
+    text-align: center;
+    clear: both;
+}
+
+#stopka
+{
+    background: #188256;
+    height: 150px;
+    padding: 10px;
+    clear: both;
+}
