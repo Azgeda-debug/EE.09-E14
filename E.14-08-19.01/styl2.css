@@ -1,0 +1,50 @@
+body
+{
+    font-family: Helvetica;
+}
+
+a:link
+{
+    background: lightskyblue;
+    margin: 5px;
+    padding: 10px;
+}
+
+a:visited
+{
+    background: lightsteelblue;
+}
+
+#lista, #logo
+{
+    background: #6FACE3;
+    color: blue;
+    height: 300px;
+    width: 30%;
+    float: left;
+}
+
+#formularz
+{
+    background: #6FACE3;
+    height: 300px;
+    width: 40%;
+    float: left; 
+}
+
+#glowny
+{
+    background: #4C93D2;
+    height: 350px;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+}
+
+#stopka
+{
+    background: #2D77BA;
+    color: white;
+    height: 170px;
+    padding: 15px;
+}
