@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT nazwa FROM `towary` WHERE promocja = 1;
+Zapytanie 2: SELECT cena FROM `towary` WHERE nazwa = 'cienkopis';
+Zapytanie 3: SELECT dostawcy.nazwa, COUNT(*) AS 'ilosc' FROM `dostawcy` INNER JOIN towary ON dostawcy.id = towary.idDostawcy GROUP BY idDostawcy;
+Zapytanie 4: ALTER TABLE `dostawcy` ADD COLUMN e_mail text;
