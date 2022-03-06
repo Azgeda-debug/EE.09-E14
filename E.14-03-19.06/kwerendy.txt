@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT imie, nazwisko FROM `autorzy`;
+Zapytanie 2: INSERT INTO `czytelnicy` VALUES (NULL, 'Anna', 'Michalak', 'ANMI05');
+Zapytanie 3: SELECT tytul FROM `ksiazki` WHERE id_kategoria = 1;
+Zapytanie 4: SELECT tytul FROM `ksiazki` INNER JOIN wypozyczenia ON ksiazki.id = wypozyczenia.id_ksiazka WHERE id_czytelnik = 3;
