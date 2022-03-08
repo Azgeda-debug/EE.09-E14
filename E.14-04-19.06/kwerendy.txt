@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT INTO `czytelnicy` VALUES (NULL, 'Anna', 'Michalak', 'an05mi');
+Zapytanie 2: SELECT imie, nazwisko FROM `czytelnicy`;
+Zapytanie 3: SELECT tytul FROM `ksiazki` WHERE id_autor = 7;
+Zapytanie 4: SELECT autorzy.nazwisko, COUNT(*) AS 'ilosc' FROM `ksiazki` INNER JOIN autorzy ON ksiazki.id_autor = autorzy.id GROUP BY id_autor;
