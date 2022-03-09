@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Usługi informatyczne</title>
+    <link rel="stylesheet" type="text/css" href="styl.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <script>
+
+        function kontakt()
+        {
+            let imie = document.getElementById("imie").value;
+            let nazwisko = document.getElementById("nazwisko").value;
+            let usluga = document.getElementById("usluga").value;
+            let regulamin = document.getElementById("regulamin").checked;
+
+                
+
+            if(regulamin == false)
+            {
+                document.getElementById("wynik").innerHTML = '<span style="color: red">Musisz zapoznać się z regulaminem</span>';
+            }
+            else
+            {
+                document.getElementById("wynik").innerHTML = imie.toUpperCase()+' '+nazwisko.toUpperCase()+'<br>Treść Twojej sprawy: '+usluga+'<br>Na podany e-mail zostanie wysłana oferta.';
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id="kontener">
+
+    <div id="logo">
+        <img src="logo.png" alt="logo firmy">
+    </div>
+    <div id="menu">
+        <a href="index.html">O nas</a>
+        <a href="uslugi.html">Usługi</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+    <div id="baner">
+        <img src="animacja.gif" alt="animacja">
+    </div>
+    <div id="glowny">
+        <hr> 
+        <h2>Kontakt</h2>
+        <table>
+            <form action="" method="post">
+                <tr>
+                    <td>Imię:</td>
+                    <td><input type="text" id="imie"></td>
+                </tr>
+                <tr>
+                    <td>Nazwisko:</td>
+                    <td><input type="text" id="nazwisko"></td>
+                </tr>
+                <tr>
+                    <td>E-mail:</td>
+                    <td><input type="text" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Usługa:</td>
+                    <td><textarea id="usluga" cols="30" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" id="regulamin">Zapoznałam/em się z regulaminem</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="reset" value="Resetuj"> <input type="button" value="Prześlij" onclick="kontakt()"></td>
+                </tr>
+            </form>
+        </table>
+        <p id="wynik"></p>
+        <hr>
+    </div>
+    <div id="stopka">
+        <p>Autor strony: <b>00000000000</b></p>
+    </div>
+    </div>
+</body>
+</html>
