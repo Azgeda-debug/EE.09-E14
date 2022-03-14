@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Działania matematyczne</title>
+    <link rel="stylesheet" type="text/css" href="styl.css">
+    <script>
+
+        function licz(dzialanie)
+        {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+
+            a = parseInt(a);
+            b = parseInt(b);
+
+            let wynik = 0;
+
+            if(dzialanie == '+')
+            {
+                wynik = a+b;
+            }
+            else if(dzialanie == '-')
+            {
+                wynik = a-b;
+            }
+            else if(dzialanie == '*')
+            {
+                wynik = a*b;
+            }
+            else if(dzialanie == '/')
+            {
+                if(b != 0) wynik = a/b;
+                else wynik = 'Nie można dzielić przez 0!';
+            }
+            else if(dzialanie == '^')
+            {
+                wynik = Math.pow(a,b);
+            }
+
+            document.getElementById('wynik').innerHTML = 'Wynik: '+wynik;
+        }
+
+    </script>
+</head>
+<body>
+    <div class="baner">
+        <img src="logo.jpg" alt="matematyka">
+    </div>
+    <div id="drugi-baner">
+        <h1>Pomocnik Matematyczny</h1>
+    </div>
+    <div class="baner">
+        <a href="dzialania.html"><h4>Działania</h4></a>
+    </div>
+    <div class="baner">
+        <a href="mnozenie.html"><h4>Tabliczka mnożenia</h4></a>
+    </div>
+    <div id="lewy">
+        <h3>Proste działania</h3>
+        liczba A: <input type="number" id="a"><br>
+        liczba B: <input type="number" id="b"><br>
+        <input type="submit" value="+" onclick="licz('+')">
+        <input type="submit" value="-" onclick="licz('-')">
+        <input type="submit" value="*" onclick="licz('*')">
+        <input type="submit" value="/" onclick="licz('/')">
+        <input type="submit" value="A^B" onclick="licz('^')">
+        <p id="wynik"></p>
+    </div>
+    <div id="prawy">
+        <ul>
+            <li>dodawanie</li>
+            <li>odejmowanie</li>
+            <li>mnożenie</li>
+            <li>dzielenie</li>
+            <li>potęgowanie</li>
+        </ul>
+    </div>
+    <div id="stopka">
+        <p>Autor: 00000000000</p>
+    </div>
+</body>
+</html>
