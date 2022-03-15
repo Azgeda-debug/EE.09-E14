@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ciągi liczbowe</title>
+    <link rel="stylesheet" type="text/css" href="styl2.css">
+    <script>
+
+        function ciag()
+        {
+            let a = document.getElementById('a').value;
+            let r = document.getElementById('r').value;
+            let n = document.getElementById('n').value;
+
+            a = parseInt(a);
+            r = parseInt(r);
+            n = parseInt(n);
+
+            let wynik = '';
+
+            if(!isNaN(a) && !isNaN(r) && !isNaN(n))
+            {
+               for(i=0; i<n; i++)
+               {
+                   wynik += ' '+a+',';
+                   a+=r;
+               }
+            }
+
+             document.getElementById('wynik').innerHTML = 'Ciąg arytmetyczny zawiera wyrazy: '+wynik;
+        }
+
+    </script>
+</head>
+<body>
+    <div id="pierwszy-baner">
+        <h2>Poznaj Ciągi Liczbowe</h2>
+    </div>
+    <div class="baner">
+        <a href="liczby.html"><h5>Ciągi arytmetyczne</h5></a>
+    </div>
+    <div class="baner">
+        <a href="fib.html"><h5>Ciąg Fibonacciego</h5></a>
+    </div>
+    <div class="baner">
+        <img src="obraz1.png" alt="Fibonacci">
+    </div>
+    <div id="lewy">
+        <ol>
+            <li>ciągi arytmetyczne</li>
+            <li>ciągi geometryczne</li>
+            <li>ciąg Fibonacciego</li>
+        </ol>
+    </div>
+    <div id="prawy">
+        <h2>Generowanie ciągu arytmetycznego</h2>
+        Pierwszy wyraz A1: <input type="number" id="a"><br>
+        Różnica ciągu R: <input type="number" id="r"><br>
+        Liczba wyrazów w ciągu N: <input type="number" id="n"><br>
+        <input type="button" value="Generuj Ciąg" onclick="ciag()">
+        <p id="wynik"></p>
+    </div>
+    <div id="stopka">
+        <p>Autor: 00000000000</p>
+    </div>
+</body>
+</html>
