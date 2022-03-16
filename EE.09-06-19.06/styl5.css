@@ -1,0 +1,50 @@
+body
+{
+    font-family: Georgia;
+}
+
+a
+{
+    border: 1px dashed sienna;
+    background-color: tan;
+    color: sienna;
+    padding: 40px;
+    line-height: 150px;
+}
+
+li
+{
+    list-style-type: circle;
+}
+
+#pierwszy-baner, #drugi-baner, #trzeci-baner, #pierwsza-stopka, #druga-stopka, #trzecia-stopka
+{
+    background-color: sienna;
+    color: white;
+    height: 150px;
+    float: left;
+}
+#pierwszy-baner, #pierwsza-stopka
+{
+    width: 40%;
+}
+
+#drugi-baner, #druga-stopka
+{
+    width: 50%;
+    font-size: 150%;
+}
+
+#trzeci-baner, #trzecia-stopka
+{
+    width: 10%;
+    text-align: center;
+}
+
+#glowny
+{
+    background-color: tan;
+    padding: 100px;
+}
+
+

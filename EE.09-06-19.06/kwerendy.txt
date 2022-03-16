@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT INTO `zgloszenia` (id, ratownicy_id, dyspozytorzy_id, adres, pilne,  czas_zgloszenia) VALUES (NULL, 1, 4, 'Warszawa, Staszica 34/5', 1, '12:34:30');
+Zapytanie 2: SELECT adres, dyspozytorzy_id FROM `zgloszenia` WHERE ratownicy_id = 3;
+Zapytanie 3: CREATE USER anna IDENTIFIED BY 'Anna4!';
+Zapytanie 4: GRANT INSERT, UPDATE, SELECT ON ratownictwo.zgloszenia TO anna;
