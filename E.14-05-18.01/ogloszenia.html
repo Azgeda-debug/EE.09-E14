@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal ogłoszeniowy</title>
+    <link rel="stylesheet" type="text/css" href="styl5.css">
+    <script>
+
+        function licz()
+        {
+            let ilosc = document.getElementById('ilosc').value;
+            let newsletter = document.getElementById('newsletter').checked;
+            let koszt = 0;
+
+            if(!isNaN(ilosc))
+            {
+                if(newsletter == true)
+                {
+                    if(ilosc > 50)
+                    {
+                        koszt = (ilosc * 1) - (ilosc * 0.2);
+                    }
+                    else
+                    {
+                        koszt = (ilosc * 2) - (ilosc * 0.2);
+                    }
+                }
+                else
+                {
+                    if(ilosc > 50)
+                    {
+                        koszt = ilosc * 1;
+                    }
+                    else
+                    {
+                        koszt = ilosc * 2;
+                    }
+                }
+            
+            }
+            document.getElementById('wynik').innerHTML = 'Koszt ogłoszeń: '+koszt+' PLN';
+        }
+
+    </script>
+</head>
+<body>
+    <div id="baner">
+        <h1>Portal Ogłoszeniowy</h1>
+    </div>
+    <div class="informacyjny">
+        <img src="logo-male.png" alt="logo-male">
+    </div>
+    <div class="informacyjny">
+        <h3>Adres</h3>
+        <p>ul. Morska 45 Gdynia</p>
+    </div>
+    <div class="informacyjny">
+        <h3>telefon</h3>
+        <p>601601601</p>
+    </div>
+    <div class="informacyjny">
+        <h3>e-mail</h3>
+        <p>ogloszenia@poczta.pl</p>
+    </div>
+    <div id="lewy">
+        <h2>Ceny ogłoszeń</h2>
+        <table>
+            <tr>
+                <td>Liczba ogłoszeń</td>
+                <td>Cena ogłoszenia</td>
+                <td>Bonus</td>
+            </tr>
+            <tr>
+                <td>1-50</td>
+                <td>2 PLN</td>
+                <td rowspan="2">Subskrypcja newslettera to upust 0,20 PLN na ogłoszenie</td>
+            </tr>
+            <tr>
+                <td>51 i więcej</td>
+                <td>1 PLN</td>
+            </tr>
+        </table>
+    </div>
+    <div id="srodkowy">
+        <h2>Witamy na stronie naszego portalu!</h2>
+        <img src="logo-duze.png" alt="ogłoszenia">
+    </div>
+    <div id="prawy">
+        <h2>Ile kosztuje ogłoszenie?</h2>
+        Podaj liczbę ogłoszeń: <input type="number" id="ilosc"><br>
+        <input type="checkbox" id="newsletter"> Policz upust na newsletter <br>
+        <button onclick="licz()">Oblicz</button>
+        <p id="wynik"></p>
+    </div>
+    <div id="stopka">
+        Portal ogłoszeniowy opracował: 00000000000
+    </div>
+</body>
+</html>
