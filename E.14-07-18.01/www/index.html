@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Szkoła ponadgimnazjalna</title>
+    <link rel="stylesheet" type="text/css" href="styl.css">
+    <script>
+
+        function licz()
+        {
+            let polak = document.getElementById('polak').value;
+            let nowak = document.getElementById('nowak').value;
+            let rysik = document.getElementById('rysik').value;
+
+            polak = parseFloat(polak);
+            nowak = parseFloat(nowak);
+            rysik = parseFloat(rysik);
+
+            let suma = 0;
+            let srednia = 0;
+
+            if(!isNaN(polak) && !isNaN(nowak) && !isNaN(rysik))
+            {
+                suma = polak + nowak + rysik;
+                srednia = suma / 3;
+
+                document.getElementById('wynik').innerHTML = srednia;
+            }
+            else
+            {
+                document.getElementById('wynik').innerHTML = 'wpisz poprawne dane';
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="baner">
+        <h2>Projekt strony internetowej szkoły ponadgimnazjalnej</h2>
+    </div>
+    <div id="lewy">
+        <h3>Do pobrania</h3>
+        <ul>
+            <li><a href="../baza/zapytania.txt">zapytania SQL</a></li>
+            <li><a href="../baza/szkola_nowa.sql">baza danych</a></li>
+        </ul>
+    </div>
+    <div id="srodkowy">
+        <table>
+            <tr>
+                <td>Treść zapytania</td>
+                <td id="tabela">Zrzut ekranu</td>
+            </tr>
+            <tr>
+            <td>INSERT INTO `uczen` VALUES (27, 'Jasny', 'Wiktoria', 1);</td>
+            <td><img src="kwerenda1.jpg" alt="kwerenda1"></td>
+            </tr>
+            <tr>
+                <td> SELECT imie, nazwisko FROM `wychowawca` WHERE id_klasy = 3;</td>
+                <td><img src="kwerenda2.jpg" alt="kwerenda2"></td>
+            </tr>
+            <tr>
+                <td>CREATE USER 'Jan_Bogucki'@'localhost' IDENTIFIED BY 'jb_123';</td>
+                <td><img src="nowy_uzytkownik.jpg" alt="nowy_uzytkownik"></td>
+            </tr>
+            <tr>
+                <td>GRANT SELECT, INSERT, DELETE ON szkola.uczen TO 'Jan_Bogucki'@'localhost';</td>
+                <td ><img src="uprawnienia.jpg" alt=""></td>
+            </tr>
+        </table>
+    </div>
+    <div id="prawy">
+        <h4>Obliczanie średniej ocen</h4>
+        <ul>
+            <li>Polak <input type="text" id="polak"></li>
+            <li>Nowak <input type="text" id="nowak"></li>
+            <li>Rysik <input type="text" id="rysik"></li><br>
+            <input type="submit" value="oblicz" onclick="licz()">
+            <h4>Średnia ocen:</h4>
+            <p id="wynik"></p>
+        </ul>
+    </div>
+    <div id="stopka">
+        <h5>autor strony: 00000000000</h5>
+    </div>
+</body>
+</html>

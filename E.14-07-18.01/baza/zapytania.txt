@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT INTO `uczen` VALUES (27, 'Jasny', 'Wiktoria', 1);
+Zapytanie 2: SELECT imie, nazwisko FROM `wychowawca` WHERE id_klasy = 3;
+Zapytanie 3: CREATE USER 'Jan_Bogucki'@'localhost' IDENTIFIED BY 'jb_123';
+Zapytanie 4: GRANT SELECT, INSERT, DELETE ON szkola.uczen TO 'Jan_Bogucki'@'localhost';
