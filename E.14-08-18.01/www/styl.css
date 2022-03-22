@@ -1,0 +1,58 @@
+body
+{
+    font-family: Tahoma;
+}
+
+a
+{
+    color: #ffd87e;
+}
+
+td
+{
+    border: 1px dotted black;
+}
+
+li
+{
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+hr
+{
+    border-color: #ffd87e;
+}
+
+#baner
+{
+    background-color: #af8c4b;
+    text-align: center;
+    height: 60px;
+}
+
+#lewy
+{
+    background-color: #af8c4b;
+    text-align: right;
+    width: 30%;
+    height: 500px;
+    float: left;
+}
+
+#prawy
+{
+    background-color: #ffd87e;
+    width: 70%;
+    height: 500px;
+    overflow: scroll;
+    float: left;
+}
+
+#stopka
+{
+    background-color: #af8c4b;
+    text-align: center;
+    height: 25px;
+    clear: both;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Szkoła ponadgimnazjalna</title>
+    <link rel="stylesheet" type="text/css" href="styl.css">
+    <script>
+
+        function licz()
+        {
+            let nowak = document.getElementById('nowak').value;
+            let polak = document.getElementById('polak').value;
+            let rysik = document.getElementById('rysik').value;
+
+            nowak = parseFloat(nowak);
+            polak = parseFloat(polak);
+            rysik = parseFloat(rysik);
+
+            let najwyzsza = 0;
+
+            if(!isNaN(nowak) && !isNaN(polak) && !isNaN(rysik))
+            {
+                najwyzsza = Math.max(nowak, polak, rysik);
+                document.getElementById('wynik').innerHTML = najwyzsza;
+            }
+            else
+            {
+                alert('Wpisz poprawne dane');
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="baner">
+        <h1>Projekt strony internetowej szkoły ponadgimnazjalnej</h1>
+    </div>
+    <div id="lewy">
+        <h3>Do pobrania</h3>
+        <ul>
+            <li><a href="../baza/zapytania.txt">zapytania sql</a></li>
+            <li><a href="../baza/szkola_nowa.sql">baza danych</a></li>
+        </ul>
+        <hr>
+        <h3>Wyznaczanie najwyższej średniej</h3>
+        <ul>
+            <li>Polak <input type="text" id="polak"></li>
+            <li>Nowak <input type="text" id="nowak"></li>
+            <li>Rysik <input type="text" id="rysik"></li>
+        </ul>
+        <input type="submit" value="wyznacz" onclick="licz()">
+        <h3>Najwyższa średnia:</h3>
+        <p id="wynik"></p>
+    </div>
+    <div id="prawy">
+        <table>
+            <tr>
+                <td>Treść zapytania</td>
+                <td style="width: 405px;">Zrzut ekranu</td>
+            </tr>
+            <tr>
+                <td>SELECT uczen.imie, uczen.nazwisko FROM `uczen` INNER JOIN wychowawca ON uczen.id_klasy = wychowawca.id_klasy WHERE wychowawca.nazwisko = 'Michalska';</td>
+                <td><img src="kwerenda1.jpg" alt="kwerenda1"></td>
+            </tr>
+            <tr>
+                <td>INSERT INTO `wychowawca` VALUES (5, 'Maciej', 'Stasiak', 5);</td>
+                <td><img src="kwerenda2.jpg" alt="kwerenda2"></td>
+            </tr>
+            <tr>
+                <td>CREATE USER 'K_Pietkiewicz'@'localhost' IDENTIFIED BY 'kp_123';</td>
+                <td><img src="nowy_uzytkownik.jpg" alt="nowy_uzytkownik"></td>
+            </tr>
+            <tr>
+                <td>GRANT SELECT, INSERT ON szkola.uczen TO 'K_Pietkiewicz'@'localhost';</td>
+                <td><img src="uprawnienia.jpg" alt="uprawnienia"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="stopka">
+        <h4>stronę wykonał: 00000000000</h4>
+    </div>
+</body>
+</html>

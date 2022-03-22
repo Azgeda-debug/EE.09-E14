@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT INTO `wychowawca` VALUES (5, 'Maciej', 'Stasiak', 5);
+Zapytanie 2: SELECT uczen.imie, uczen.nazwisko FROM `uczen` INNER JOIN wychowawca ON uczen.id_klasy = wychowawca.id_klasy WHERE wychowawca.nazwisko = 'Michalska';
+Zapytanie 3: CREATE USER 'K_Pietkiewicz'@'localhost' IDENTIFIED BY 'kp_123';
+Zapytanie 4: GRANT SELECT, INSERT ON szkola.uczen TO 'K_Pietkiewicz'@'localhost';
