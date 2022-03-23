@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Szkoła ponadgimnazjalna</title>
+    <link rel="stylesheet" type="text/css" href="styl.css">
+    <script>
+
+        function licz()
+        {
+            let polak = document.getElementById('polak').value;
+            let nowak = document.getElementById('nowak').value;
+            let rysik = document.getElementById('rysik').value;
+
+            polak = parseFloat(polak);
+            nowak = parseFloat(nowak);
+            rysik = parseFloat(rysik);
+
+            let srednia = 0;
+
+            if(!isNaN(nowak) && !isNaN(polak) && !isNaN(rysik))
+            {
+               srednia = Math.min(polak, nowak, rysik);
+                document.getElementById('wynik').innerHTML = srednia;
+            }
+            else
+            {
+                alert('wpisz poprawne dane');
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="baner">
+        <h1>Projekt strony internetowej szkoły ponadgimnazjalne</h1>
+    </div>
+    <div id="lewy">
+        <table>
+            <tr>
+                <td>Treść zapytania</td>
+                <td style="width: 405px;">Zrzut ekranu</td>
+            </tr>
+            <tr>
+                <td>INSERT INTO `klasa` VALUES(5, '3a');</td>
+                <td><img src="kwerenda1.jpg" alt="kwerenda1"></td>
+            </tr>
+            <tr>
+                <td>SELECT klasa.nazwa, AVG(uczen.Srednia_ocen) FROM `uczen` INNER JOIN klasa ON uczen.id_klasy = klasa.id GROUP BY klasa.nazwa;</td>
+                <td><img src="kwerenda2.jpg" alt="kwerenda2"></td>
+            </tr>
+            <tr>
+                <td>CREATE USER 'Dyrektor'@'localhost' IDENTIFIED BY 'dyr_123';</td>
+                <td><img src="nowy_uzytkownik.jpg" alt="nowy_uzytkownik"></td>
+            </tr>
+            <tr>
+                <td>GRANT ALL PRIVILEGES ON szkola.* TO 'Dyrektor'@'localhost';</td>
+                <td><img src="uprawnienia.jpg" alt="uprawnienia"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="prawy">
+            <h2>Do pobrania</h2>
+            <ul>
+                <li><a href="../baza/zapytania.txt">zapytania SQL</a></li>
+                <li><a href="../baza/szkola_nowa.sql">baza danych</a></li>
+            </ul>
+            <hr>
+            <h3>Wyznaczanie najniższej średniej</h3>
+            <ul>
+                <li>Polak <input type="text" id="polak"></li>
+                <li>Nowak <input type="text" id="nowak"></li>
+                <li>Rysik <input type="text" id="rysik"></li>
+            </ul>
+            <input type="submit" value="wyznacz" onclick="licz()">
+            <h3>Najniższa średnia:</h3>
+            <p id="wynik"></p>
+    </div>
+    <div id="stopka">
+        <h3>stronę wykonał: 00000000000</h3>
+    </div>
+</body>
+</html>

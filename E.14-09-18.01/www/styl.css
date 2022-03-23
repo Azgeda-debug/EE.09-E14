@@ -1,0 +1,60 @@
+body
+{
+    font-family: Arial;
+    color: white;
+}
+
+a
+{
+    color: yellow;
+}
+
+td
+{
+    border: 1px dashed black;
+}
+
+hr
+{
+    border-color: yellow;
+}
+
+li
+{
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+#baner
+{
+    background-color: #5957a1;
+    text-align: center;
+    padding: 10px;
+    height: 70px;
+}
+
+#lewy
+{
+    background-color: #bbadcd;
+    width: 65%;
+    height: 450px;
+    overflow: scroll;
+    float: left;
+}
+
+#prawy
+{
+    background-color: #5957a1;
+    text-align: center;
+    width: 35%;
+    height: 450px;
+    float: left;
+}
+
+#stopka
+{
+    background-color: #5957a1;
+    text-align: center;
+    height: 50px;
+    clear: both;
+}
