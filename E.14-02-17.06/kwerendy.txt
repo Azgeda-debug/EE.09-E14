@@ -1,0 +1,3 @@
+Zapytanie 1: SELECT id, model, kolor FROM `samochody` WHERE marka = 'Toyota' AND rocznik = 2014;
+Zapytanie 2: SELECT id, marka, model, rocznik FROM `samochody`;
+Zapytanie 3: SELECT samochody.id, samochody.model, zamowienia.telefon FROM `samochody` INNER JOIN zamowienia ON samochody.id = zamowienia.Samochody_id;
