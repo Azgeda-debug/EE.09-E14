@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Remonty mieszkań</title>
+    <link rel="stylesheet" type="text/css" href="remont.css">
+    <script>
+
+        function licz()
+        {
+            let powierzchnia = document.getElementById('powierzchnia').value;
+            const plytki_wieksze = document.getElementById('plytki_wieksze').checked;
+            const plytki_mniejsze = document.getElementById('plytki_mniejsze').checked;
+
+            powierzchnia = parseInt(powierzchnia);
+
+            let koszt = 0;
+
+            if(plytki_wieksze == true)
+            {
+                koszt = powierzchnia * 70;
+            }
+
+            if(plytki_mniejsze == true)
+            {
+                koszt = powierzchnia * 80;
+            }
+
+            document.getElementById('wynik').innerHTML = 'Koszt kafelkowania: '+koszt+' zł.';
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="menu"><img src="logotyp.png" alt="logotyp"></div>
+    <div class="menu"><a href="index.html">O FIRMIE</a></div>
+    <div class="menu"><a href="adres.html">ADRES</a></div>
+    <div class="menu"><a href="policz.html">POLICZ</a></div>
+    <div class="menu"><a href="http://www.jakremontowac.pl/" target="_blank">LINKI </a></div>
+    <div id="glowny">
+        <h1>Kafelkowanie łazienki</h1>
+        <p>powierzchnia w m<sup>2</sup> <input type="number" id="powierzchnia"></p>
+        <input type="radio" name="plytki" id="plytki_wieksze"> Płytki 20 x 20 cm <br>
+        <input type="radio" name="plytki" id="plytki_mniejsze"> Płytki 25 x 12 cm <br><br>
+        <button onclick="licz()">PRZELICZ</button>
+        <p id="wynik"></p>
+    </div>
+    <div id="stopka">
+        <p>Autor strony: 00000000000</p>
+    </div>
+</body>
+</html>
