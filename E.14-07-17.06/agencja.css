@@ -1,0 +1,46 @@
+table, td
+{
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid brown;
+    border-collapse: collapse;
+}
+
+input[type="submit"]
+{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid blue;
+    background-color: cyan;
+    font-size: 20px;
+}
+
+h1
+{
+    text-align: center;
+}
+
+#lewy
+{
+    background-color: #FF8989;
+    width: 40%;
+    height: 600px;
+    float: left;
+}
+
+#prawy
+{
+    background-color: #7872D9;
+    width: 60%;
+    height: 600px;
+    float: left;
+}
+
+#stopka
+{
+    background-color: black;
+    color: white;
+    text-align: right;
+    font-size: 150%;
+    clear: both;
+}
