@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT tytul FROM `ksiazki` WHERE Wydawnictwo = 'Ossolineum';
+Zapytanie 2: SELECT ksiazki.Tytul, autorzy.Nazwisko FROM `ksiazki` INNER JOIN autorzy ON ksiazki.AutorID = autorzy.IDAutor;
+Zapytanie 3: SELECT egzemplarze.IDEgzemplarz, ksiazki.Tytul FROM `egzemplarze` INNER JOIN ksiazki ON egzemplarze.KsiazkaID = ksiazki.IDKsiazki WHERE egzemplarze.DoWypozyczenia = 0;
+Zapytanie 4: INSERT INTO `autorzy` VALUES (3, 'Adam', 'Asnyk');
