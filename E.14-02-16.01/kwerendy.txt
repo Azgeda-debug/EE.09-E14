@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT Model, Typ FROM `artykuly` ORDER BY Cena ASC;
+Zapytanie 2: SELECT producenci.Nazwa, artykuly.Model, artykuly.Typ FROM `artykuly` INNER JOIN producenci ON artykuly.ProducenciID = producenci.IDProducenci;
+Zapytanie 3: SELECT artykuly.Model FROM `artykuly` INNER JOIN magazyn ON artykuly.IDArtykuly = magazyn.IDMagazyn WHERE magazyn.Ilosc = 0;
+Zapytanie 4: INSERT INTO `producenci` VALUES (3, 'Samsung', 'samsung.pl');
