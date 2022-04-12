@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT Tytul FROM `filmy` WHERE Gatunek = 'SF';
+Zapytanie 2: SELECT filmy.Tytul, rezyserzy.Nazwisko FROM `rezyserzy` INNER JOIN filmy ON rezyserzy.IDRezyser = filmy.RezyserID;
+Zapytanie 3: SELECT filmy.* FROM `recenzje` INNER JOIN filmy ON recenzje.IDRecenzja = filmy.RecenzjaID WHERE recenzje.Ocena = 4;
+Zapytanie 4: INSERT INTO `rezyserzy` VALUES (4, 'Andrzej ', 'Wajda');
