@@ -1,0 +1,45 @@
+a
+{
+    color: yellow;
+}
+
+img
+{
+    border: 1px solid black;
+}
+
+#baner
+{
+    background-color: #4A7684;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    padding: 20px;
+}
+
+#lewy
+{
+    width: 65%;
+    height: 500px;
+    text-align: center;
+    float: left;
+}
+
+#prawy
+{
+    width: 35%;
+    height: 500px;
+    background-color: #4A7684;
+    color: white;
+    float: left;
+}
+
+#stopka
+{
+    background-color: #4A7684;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    padding: 20px;
+    clear: both;
+}

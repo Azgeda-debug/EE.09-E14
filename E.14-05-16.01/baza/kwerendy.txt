@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT INTO `lokalizacja` VALUES (3, 'KAT1', 'Katowice, Korfantego 105');
+Zapytanie 2: SELECT id FROM `pogoda` WHERE temperatura > 20;
+Zapytanie 3: SELECT prognoza.Lokalizacja_id, prognoza.dataProg FROM pogoda INNER JOIN prognoza ON pogoda.id = prognoza.Pogoda_id WHERE pogoda.Wilgotnosc > 50;
+Zapytanie 4: SELECT prognoza.Pogoda_id, lokalizacja.Nazwa FROM `prognoza` INNER JOIN lokalizacja ON prognoza.Lokalizacja_id = lokalizacja.id WHERE prognoza.dataProg = '2015-07-02';

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Stacja Meteo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+
+        function zamiana(a)
+        {
+            let stopnie = document.getElementById('stopnie').value;
+            let wynik = 0;
+
+            stopnie = parseFloat(stopnie)
+            if(!isNaN(stopnie))
+            {
+                if(a == 'kelwin')
+                {
+                    wynik = stopnie + 273.15 + ' K';
+                }
+                else if(a == 'farenheit')
+                {
+                    wynik = (stopnie * 1.8) + 32 + ' F';
+                }
+            }
+            else
+            {
+                alert('Błąd danych');
+            }
+            document.getElementById('wynik').innerHTML = wynik;
+        }
+
+    </script>
+</head>
+<body>
+    <div id="baner">
+        <h1>STACJA METEO</h1>
+    </div>
+    <div id="lewy">
+        <h2>Dokumentacja wyników zapytań w bazie Meteo</h2>
+        <table>
+            <tr>
+                <td><img src="kw1.jpg" alt="kwerenda1"></td>
+                <td><img src="kw2.jpg" alt="kwerenda2"></td>
+            </tr>
+            <tr>
+                <td><img src="kw3.jpg" alt="kwerenda3"></td>
+                <td><img src="kw4.jpg" alt="kwerenda4"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="prawy">
+        <h2>zamiana jednostek temperatury</h2>
+        Temperatura w <sup>o</sup>C:
+        <input type="text" id="stopnie"><br><br>
+        <input type="submit" value="Kelwiny" onclick="zamiana('kelwin')">
+        <input type="submit" value="Fahrenheity" onclick="zamiana('farenheit')">
+        <p id="wynik"></p>
+        <h2>Do pobrania</h2>
+        <ul>
+            <li><a href="../baza/kwerendy.txt">Kwerendy</a></li>
+            <li><a href="../baza/meteo.sql">Eksport MySQL</a></li>
+        </ul>
+    </div>
+    <div id="stopka">
+        PESEL AUTORA STRONY: 0000000000
+    </div>
+</body>
+</html>
