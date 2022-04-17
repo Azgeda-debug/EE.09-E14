@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Miernik jakości hasła</title>
+	<link rel="stylesheet" type="text/css" href="styl.css">
+	<script>
+
+		function sprawdz()
+		{
+			const haslo = document.getElementById('haslo').value;
+			let wynik = '';
+
+			const dlugosc = haslo.length;
+
+			let liczba = 0;
+
+			if(haslo.search('[0-9]') > 0)
+			{
+				liczba = 1;
+			}
+
+			if(haslo == '')
+			{
+				wynik = 'WPISZ HASŁO!';
+				document.getElementById('wynik').style.color = 'red';
+			}
+			else if(dlugosc > 3 && dlugosc < 7 && liczba == 1)
+			{
+				wynik = 'ŚREDNIE';
+				document.getElementById('wynik').style.color = 'blue';
+			}
+			else if(dlugosc > 6 && liczba == 1)
+			{
+				wynik = 'DOBRE';
+				document.getElementById('wynik').style.color = 'green';
+			}
+			else
+			{
+				wynik = 'SŁABE';
+				document.getElementById('wynik').style.color = 'yellow';
+			}
+
+			document.getElementById('wynik').innerHTML = wynik;
+		}
+
+	</script>
+</head>
+<body>
+	<div class="baner">
+		<a href="index.html"><h1>Sprawdź swoje hasło</h1></a>
+	</div>
+	<div class="lewy">
+		<h2>Wybierz</h2>
+		<ol>
+			<li><a href="haslo.html">Sprawdź hasło</a></li>
+			<li><a href="zasady.html">Zasady tworzenia hasła</a></li>
+		</ol>
+	</div>
+	<div class="prawy">
+		<p>Twoje hasło: <input type="password" id="haslo"> <input type="submit" value="Sprawdź" onclick="sprawdz()"></p>
+		<p id="wynik"></p>
+	</div>
+	<div class="stopka">
+		<h3>Miernik jakości hasła</h3>
+		<p>Stronę opracował: 00000000000</p>
+	</div>
+</body>
+</html>
